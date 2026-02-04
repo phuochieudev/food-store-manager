@@ -14,7 +14,7 @@
       "commandName": "Executable",
       "executablePath": "dotnet",
       "commandLineArgs": "watch run --launch-profile http",
-      "workingDirectory": "/home/nguyen-thanh-hung/Documents/TapHoaNho/shiny-carnival/RetailStoreManagement",
+      "workingDirectory": "",
       "dotnetRunMessages": true,
       "launchBrowser": false
     }
