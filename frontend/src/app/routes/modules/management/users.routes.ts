@@ -9,7 +9,7 @@ export const usersRoutes: object = {};
 // basePath giờ đây là tương đối so với layout cha (/admin).
 const generatedModule: ModuleRoutes<any> = {
   moduleName: 'users',
-  basePath: '/users',
+  basePath: 'users',
   routes: generateManagementRouteConfigs(userAdminDefinition),
 };
 

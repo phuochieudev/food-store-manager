@@ -27,7 +27,7 @@ export const useLoginPage = () => {
         });
 
         message.success("Đăng nhập thành công!");
-        navigate({ to: "/" }); // điều hướng về trang chủ
+        navigate({ to: "/admin/users" }); // điều hướng về trang chủ
       } else {
         message.error(res.message || "Đăng nhập thất bại!");
       }

@@ -8,29 +8,7 @@ import AppFooter from '../components/layout/Footer';
 const { Content, Sider } = Layout;
 
 const MainLayout = ({ children }: { children: ReactNode }) => {
-  const [collapsed, setCollapsed] = useState(true); // Mặc định collapsed
-  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const handleMouseEnter = () => {
-    // Clear timeout nếu có
-    if (hoverTimeoutRef.current) {
-      clearTimeout(hoverTimeoutRef.current);
-      hoverTimeoutRef.current = null;
-    }
-    // Mở sidebar khi hover
-    setCollapsed(false);
-  };
-
-  const handleMouseLeave = () => {
-    // Clear timeout nếu có
-    if (hoverTimeoutRef.current) {
-      clearTimeout(hoverTimeoutRef.current);
-    }
-    // Thêm delay nhỏ để tránh flickering khi di chuyển chuột nhanh
-    hoverTimeoutRef.current = setTimeout(() => {
-      setCollapsed(true);
-    }, 100);
-  };
+  const [collapsed, setCollapsed] = useState(false);
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -39,18 +17,14 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
         theme="dark"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
         style={{
-          position: 'sticky',
-          top: 0,
-          height: '100vh',
-          overflow: 'auto',
+          background: '#020617',
+    borderRight: '1px solid rgba(255,255,255,0.06)',
         }}
       >
-        <Sidebar collapsed={collapsed} />
+        <Sidebar collapsed={collapsed}/>
       </Sider>
-      <Layout>
+      <Layout>  
         <AppHeader />
         <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
           <div style={{  background: '#fff', minHeight: 360 }}>
