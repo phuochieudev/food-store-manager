@@ -109,7 +109,6 @@ const Sidebar = ({ collapsed }: SidebarProps) => {
         </div>
       )}
       <Menu
-        // defaultSelectedKeys={['1']}
         mode="inline"
         theme="dark"
         inlineCollapsed={collapsed}
