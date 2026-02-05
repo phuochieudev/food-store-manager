@@ -98,7 +98,8 @@ const Sidebar = ({ collapsed }: SidebarProps) => {
         <div className="px-4 py-3 mb-4 bg-gray-800 rounded-md mx-2 text-white flex items-center space-x-3">
           <Avatar 
             size="large"
-            style={{ backgroundColor: '#1890ff', color: '#fff', fontWeight: 'bold' }}
+            style={{  background: 'linear-gradient(135deg, #0063e5, #6366f1)',
+                      fontWeight: 600,}}
           >
             {user?.username ? user.username.charAt(0).toUpperCase() : "O"}
           </Avatar>

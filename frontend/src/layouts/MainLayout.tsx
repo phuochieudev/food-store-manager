@@ -18,15 +18,13 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
         onCollapse={(value) => setCollapsed(value)}
         theme="dark"
         style={{
-          position: 'sticky',
-          top: 0,
-          height: '100vh',
-          overflow: 'auto',
+          background: '#020617',
+    borderRight: '1px solid rgba(255,255,255,0.06)',
         }}
       >
         <Sidebar collapsed={collapsed}/>
       </Sider>
-      <Layout>
+      <Layout>  
         <AppHeader />
         <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
           <div style={{  background: '#fff', minHeight: 360 }}>
